@@ -3,7 +3,8 @@ from function import (
     calculate_sum,
     calculate_difference,
     calculate_product,
-    calculate_division
+    calculate_division,
+    calculate_power
 )
 
 class TestMathOperations(unittest.TestCase):
@@ -25,6 +26,10 @@ class TestMathOperations(unittest.TestCase):
     def test_division_by_zero(self):
         with self.assertRaises(ValueError):
             calculate_division(10, 0)
+
+    def test_zero_power_zero(self):
+        with self.assertRaises(ValueError):
+            calculate_power(0, 0)
 
 if __name__ == '__main__':
     unittest.main()

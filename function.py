@@ -14,3 +14,8 @@ def calculate_division(a, b):
     if b == 0:
         raise ValueError("Division by zero is not allowed.")
     return a / b
+
+def calculate_power(a, b):
+    if a == 0 and b == 0:
+        raise ValueError("0 ** 0 is undefined")
+    return a ** b
